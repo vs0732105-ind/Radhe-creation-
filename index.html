@@ -2,105 +2,74 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Radhe Creation | Premium Sarees & Ethnic Wear</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Radhe Creation – Premium Sarees, Suits & Ethnic Wear. Order directly on WhatsApp.">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>Radhe Creation | Premium Ethnic Sarees</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Poppins;background:#fff8f3}
+*{margin:0;padding:0;box-sizing:border-box;font-family: 'Segoe UI',sans-serif}
+body{background:#fff;color:#222}
 
-/* Header */
+/* HEADER */
 header{
-  position:sticky;top:0;z-index:999;
-  background:#fff;
-  box-shadow:0 5px 20px rgba(0,0,0,.1);
-  padding:15px 30px;
-  display:flex;justify-content:space-between;align-items:center;
+display:flex;justify-content:space-between;align-items:center;
+padding:15px 40px;border-bottom:1px solid #eee;
 }
-header h1{color:#7a1f1f;letter-spacing:2px}
-header input{
-  padding:10px 20px;border-radius:30px;
-  border:1px solid #ccc;width:260px;
+header h1{font-size:26px;letter-spacing:2px}
+nav a{
+margin:0 12px;text-decoration:none;color:#222;font-weight:500
 }
+nav a:hover{color:#a66}
 
-/* Hero */
+/* HERO */
 .hero{
-  height:80vh;
-  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-  urlhttps://images.unsplash.com/photo-1576824409051-8e46d7f9f64f?auto=format&fit=crop&w=1470&q=80
-  background-size:cover;background-position:center;
-  display:flex;align-items:center;justify-content:center;
-  color:red;text-align:center;
+background:url('https://images.unsplash.com/photo-1618354691213-fd7f66cfcf38') center/cover no-repeat;
+height:80vh;display:flex;align-items:center;padding-left:60px;
 }
-.hero h2{font-size:56px;letter-spacing:3px}
-.hero p{margin-top:10px;font-size:20px}
+.hero div{
+background:rgba(255,255,255,0.9);
+padding:30px;border-radius:8px;max-width:420px;
+}
+.hero h2{font-size:38px;margin-bottom:10px}
+.hero p{margin-bottom:15px}
+.hero a{
+background:#000;color:#fff;padding:12px 25px;
+text-decoration:none;display:inline-block
+}
 
-/* Controls */
-.controls{
-  display:flex;justify-content:center;gap:15px;
-  margin:40px 10px;flex-wrap:wrap;
-}
-.controls button,select{
-  padding:10px 25px;border:none;
-  border-radius:30px;font-weight:600;
-  cursor:pointer;
-}
-.controls button.active{background:#7a1f1f;color:white}
+/* COLLECTION */
+.section{padding:60px 40px}
+.section h2{text-align:center;font-size:32px;margin-bottom:40px}
 
-/* Products */
 .products{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:35px;
-  max-width:1200px;margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
 }
-.card{
-  background:white;border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 15px 40px rgba(0,0,0,.15);
-  transition:.4s;
-  position:relative;
+.product{
+border:1px solid #eee;border-radius:6px;overflow:hidden;
+transition:0.3s;
 }
-.card:hover{transform:translateY(-10px)}
-.card img{
-  width:100%;height:360px;
-  object-fit:cover;transition:.5s;
-}
-.card:hover img{transform:scale(1.08)}
-
-.tag{
-  position:absolute;top:15px;left:15px;
-  background:#7a1f1f;color:white;
-  padding:5px 12px;border-radius:20px;
-  font-size:12px;font-weight:600;
+.product:hover{transform:translateY(-5px)}
+.product img{width:100%;height:360px;object-fit:cover}
+.product .info{padding:15px}
+.price del{color:#999}
+.price strong{color:#000;font-size:18px}
+.product button{
+width:100%;padding:12px;border:none;
+background:#000;color:#fff;font-size:16px;cursor:pointer
 }
 
-.info{padding:20px;text-align:center}
-.info h3{font-size:20px}
-.info p{margin:8px 0;font-weight:600}
-
-.info a{
-  display:inline-block;margin-top:10px;
-  padding:10px 30px;border-radius:30px;
-  background:#25D366;color:white;
-  text-decoration:none;
-}
-
-/* WhatsApp Floating */
-.whatsapp{
-  position:fixed;bottom:25px;right:25px;
-  background:#25D366;color:white;
-  padding:15px 22px;border-radius:50px;
-  text-decoration:none;font-weight:600;
-}
-
+/* FOOTER */
 footer{
-  background:#2b0f0f;color:white;
-  text-align:center;padding:30px;margin-top:60px;
+background:#111;color:#eee;padding:40px;text-align:center
+}
+footer p{margin:6px 0;font-size:14px}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+.hero{padding:20px;height:60vh}
+.hero h2{font-size:28px}
+header{flex-direction:column}
 }
 </style>
 </head>
@@ -108,74 +77,68 @@ footer{
 <body>
 
 <header>
-  <h1>RADHE</h1>
-  <input type="text" placeholder="Search products..." onkeyup="searchProducts(this.value)">
+<h1>RADHE CREATION</h1>
+<nav>
+<a href="#">Home</a>
+<a href="#collection">Collection</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
 <section class="hero">
-  <div>
-    <h2>RADHE CREATION</h2>
-    <p>Premium Sarees & Ethnic Wear</p>
-  </div>
+<div>
+<h2>Handcrafted Ethnic Sarees</h2>
+<p>Luxury silk, cotton & banarasi sarees with timeless elegance</p>
+<a href="#collection">Shop Now</a>
+</div>
 </section>
 
-<div class="controls">
-  <button class="active" onclick="filterCat('Saree',this)">Saree</button>
-  <button onclick="filterCat('Suit',this)">Suit</button>
-  <button onclick="filterCat('Lehenga',this)">Lehenga</button>
+<section class="section" id="collection">
+<h2>Featured Collection</h2>
+
+<div class="products">
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf">
+<div class="info">
+<h3>Banarasi Silk Saree</h3>
+<p class="price"><del>₹16,900</del> <strong>₹12,900</strong></p>
+<button onclick="order('Banarasi Silk Saree - ₹12900')">Order on WhatsApp</button>
+</div>
 </div>
 
-<div class="products" id="productList"></div>
+<div class="product">
+<img src="https://images.unsplash.com/photo-1618354690933-b6e2d1b6a45d">
+<div class="info">
+<h3>Soft Cotton Saree</h3>
+<p class="price"><del>₹5,900</del> <strong>₹3,900</strong></p>
+<button onclick="order('Soft Cotton Saree - ₹3900')">Order on WhatsApp</button>
+</div>
+</div>
 
-<footer>© 2026 Radhe Creation</footer>
+<div class="product">
+<img src="https://images.unsplash.com/photo-1622445275463-afa2ab738c34">
+<div class="info">
+<h3>Kanjivaram Silk Saree</h3>
+<p class="price"><del>₹22,000</del> <strong>₹18,500</strong></p>
+<button onclick="order('Kanjivaram Silk Saree - ₹18500')">Order on WhatsApp</button>
+</div>
+</div>
 
-<a class="whatsapp" href="https://wa.me/916239705787" target="_blank">WhatsApp</a>
+</div>
+</section>
+
+<footer id="contact">
+<p>📞 WhatsApp: 6239705787</p>
+<p>📧 Email: vs0732105@gmail.com</p>
+<p>© 2026 Radhe Creation. All Rights Reserved</p>
+</footer>
 
 <script>
-let allProducts=[];
-
-fetch("https://opensheet.elk.sh/11y3HgHjYZ3azXVnicMlp4D3pAWUUY5w9vmR-dE1x6oM/Sheet1")
-.then(res=>res.json())
-.then(data=>{
-  // Filter out only Saree, Suit, Lehenga products
-  allProducts = data.filter(p=>{
-    let cat = p.category?.toLowerCase();
-    return cat==="saree" || cat==="suit" || cat==="lehenga";
-  });
-  render(allProducts);
-});
-
-function render(data){
-  let html="";
-  data.forEach(p=>{
-    html+=`
-    <div class="card">
-      ${p.tag?`<div class="tag">${p.tag}</div>`:""}
-      <img src="${p.image}" loading="lazy">
-      <div class="info">
-        <h3>${p.name}</h3>
-        <p>₹ ${p.price}</p>
-        <a href="https://wa.me/916239705787?text=I%20want%20${encodeURIComponent(p.name)}%20Price:%20₹${p.price}">
-        Order on WhatsApp
-        </a>
-      </div>
-    </div>`;
-  });
-  document.getElementById("productList").innerHTML=html;
-}
-
-function filterCat(cat,btn){
-  document.querySelectorAll(".controls button").forEach(b=>b.classList.remove("active"));
-  btn.classList.add("active");
-  render(allProducts.filter(p=>p.category?.toLowerCase()===cat.toLowerCase()));
-}
-
-function searchProducts(q){
-  q=q.toLowerCase();
-  render(allProducts.filter(p=>
-    p.name.toLowerCase().includes(q) ||
-    p.category?.toLowerCase().includes(q)
-  ));
+function order(product){
+let phone = "6239705787";
+let msg = `Hello Radhe Creation, I want to order: ${product}`;
+window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,'_blank');
 }
 </script>
 
