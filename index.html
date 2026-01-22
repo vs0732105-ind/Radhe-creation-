@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Radhe Creation | Luxury Saree & Ethnic Wear</title>
+<title>Radhe Creation | Premium Sarees & Ethnic Wear</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Radhe Creation – Luxury Sarees, Suits & Ethnic Wear. Order directly on WhatsApp.">
+<meta name="description" content="Radhe Creation – Premium Sarees, Suits & Ethnic Wear. Order directly on WhatsApp.">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Poppins;background:#fff8f3}
@@ -18,34 +21,23 @@ header{
   padding:15px 30px;
   display:flex;justify-content:space-between;align-items:center;
 }
-header h1{color:#7a1f1f;letter-spacing:2px;font-weight:700;font-size:24px;}
+header h1{color:#7a1f1f;letter-spacing:2px}
 header input{
   padding:10px 20px;border-radius:30px;
   border:1px solid #ccc;width:260px;
 }
 
-/* Hero Section */
+/* Hero */
 .hero{
   height:80vh;
-  background:
-    linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),
-    url("https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb"); /* default free model background, aap replace kar sakte ho */
-  background-size:cover;
-  background-position:center;
+  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+  url("https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb");
+  background-size:cover;background-position:center;
   display:flex;align-items:center;justify-content:center;
   color:white;text-align:center;
-  position:relative;
-  overflow:hidden;
 }
-.hero::before{
-  content:"";
-  position:absolute;top:0;left:0;width:100%;height:100%;
-  background-image: url('https://images.unsplash.com/photo-1581091012184-23b35f55de68'); /* subtle ethnic pattern */
-  opacity:0.15; /* subtle design */
-  background-repeat:repeat;
-}
-.hero h2{font-size:48px;letter-spacing:3px;font-weight:700;position:relative;z-index:1;}
-.hero p{margin-top:10px;font-size:20px;position:relative;z-index:1;}
+.hero h2{font-size:56px;letter-spacing:3px}
+.hero p{margin-top:10px;font-size:20px}
 
 /* Controls */
 .controls{
@@ -90,6 +82,7 @@ header input{
 .info{padding:20px;text-align:center}
 .info h3{font-size:20px}
 .info p{margin:8px 0;font-weight:600}
+
 .info a{
   display:inline-block;margin-top:10px;
   padding:10px 30px;border-radius:30px;
@@ -105,24 +98,9 @@ header input{
   text-decoration:none;font-weight:600;
 }
 
-/* Inquiry Section */
-.inquiry{
-  max-width:1000px;
-  margin:50px auto;
-  padding:30px;
-  background:#fdf0eb;
-  border-radius:20px;
-  text-align:center;
-  box-shadow:0 10px 30px rgba(0,0,0,.1);
-}
-.inquiry h3{color:#7a1f1f;font-size:28px;margin-bottom:20px;}
-.inquiry p{margin:8px;font-size:16px;color:#333;}
-
-/* Footer */
 footer{
   background:#2b0f0f;color:white;
-  text-align:center;padding:30px;margin-top:40px;
-  font-size:14px;
+  text-align:center;padding:30px;margin-top:60px;
 }
 </style>
 </head>
@@ -130,14 +108,14 @@ footer{
 <body>
 
 <header>
-  <h1>RADHE CREATION</h1>
+  <h1>RADHE</h1>
   <input type="text" placeholder="Search products..." onkeyup="searchProducts(this.value)">
 </header>
 
 <section class="hero">
   <div>
-    <h2>Luxury Saree & Ethnic Wear</h2>
-    <p>Premium Collection For Every Occasion</p>
+    <h2>RADHE CREATION</h2>
+    <p>Premium Sarees & Ethnic Wear</p>
   </div>
 </section>
 
@@ -156,22 +134,14 @@ footer{
 
 <div class="products" id="productList"></div>
 
-<!-- Inquiry Section -->
-<section class="inquiry">
-  <h3>Contact / Inquiry</h3>
-  <p>Email: <a href="mailto:vs0732105@gmail.com">vs0732105@gmail.com</a></p>
-  <p>Phone / WhatsApp: <a href="https://wa.me/916239705787">6239705787</a></p>
-  <p>Address: SCO 840, NAC Manimajra, Chandigarh 160101</p>
-</section>
-
-<footer>© 2026 Radhe Creation | All Rights Reserved</footer>
+<footer>© 2026 Radhe Creation</footer>
 
 <a class="whatsapp" href="https://wa.me/916239705787" target="_blank">WhatsApp</a>
 
 <script>
 let allProducts=[];
 
-fetch("https://opensheet.elk.sh/11y3HgHjYZ3azXVnicMlp4D3pAWUUY5wvmR-dE1x6oM/Sheet1")
+fetch("https://opensheet.elk.sh/11y3HgHjYZ3azXVnicMlp4D3pAWUUY5w9vmR-dE1x6oM/Sheet1")
 .then(res=>res.json())
 .then(data=>{
   allProducts=data;
